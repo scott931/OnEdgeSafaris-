@@ -190,6 +190,28 @@
           transform: translate3d(49px, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
         }
       }
+      /* Philosophy image - retain circular shape */
+      .philosophy-image {
+        border-radius: 999px;
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+      .philosophy-image-div {
+        overflow: hidden;
+        border-radius: 999px;
+      }
+      /* Feature image - retain circular shape */
+      .feature-image {
+        border-radius: 999px;
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+      .feature-image-div {
+        overflow: hidden;
+        border-radius: 999px;
+      }
       /* Capability cards: content-only layout (images removed) */
       .capability-card {
         align-items: stretch;
@@ -1165,18 +1187,12 @@
             <div class="feature-image-div">
               <img
                 class="feature-image"
-                src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691acebc0a4bc2c26bf74b3d_feature-image.webp"
+                src="../cdn.prod.website-files.com/69141acf3553f1153a380568/dash.png"
                 alt="Feature Image"
-                style="opacity: 0"
+                style="opacity: 1"
                 sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
                 data-w-id="21c4dd29-2a6d-11c4-dca8-af748226ddd9"
                 loading="lazy"
-                srcset="
-                  https://cdn.prod.website-files.com/69141acf3553f1153a380568/691acebc0a4bc2c26bf74b3d_feature-image-p-500.webp   500w,
-                  https://cdn.prod.website-files.com/69141acf3553f1153a380568/691acebc0a4bc2c26bf74b3d_feature-image-p-800.webp   800w,
-                  https://cdn.prod.website-files.com/69141acf3553f1153a380568/691acebc0a4bc2c26bf74b3d_feature-image-p-1080.webp 1080w,
-                  https://cdn.prod.website-files.com/69141acf3553f1153a380568/691acebc0a4bc2c26bf74b3d_feature-image.webp        1500w
-                "
               />
             </div>
           </div>
@@ -1512,15 +1528,9 @@
           <div class="philosophy-div">
             <div data-w-id="1efd1eff-5d4c-ce87-d54d-749d3a0b1fd1" class="philosophy-image-div">
               <img
-                src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691b07c109f7c46da386ef88_philosophy.webp"
+                src="../cdn.prod.website-files.com/69141acf3553f1153a380568/eagle.jpeg"
                 loading="lazy"
                 sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
-                srcset="
-                  https://cdn.prod.website-files.com/69141acf3553f1153a380568/691b07c109f7c46da386ef88_philosophy-p-500.webp   500w,
-                  https://cdn.prod.website-files.com/69141acf3553f1153a380568/691b07c109f7c46da386ef88_philosophy-p-800.webp   800w,
-                  https://cdn.prod.website-files.com/69141acf3553f1153a380568/691b07c109f7c46da386ef88_philosophy-p-1080.webp 1080w,
-                  https://cdn.prod.website-files.com/69141acf3553f1153a380568/691b07c109f7c46da386ef88_philosophy.webp        1500w
-                "
                 alt=""
                 class="philosophy-image"
               />
