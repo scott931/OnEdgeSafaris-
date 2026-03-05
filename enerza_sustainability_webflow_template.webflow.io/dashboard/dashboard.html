@@ -63,7 +63,7 @@
         }
 
         body {
-            background: #f0f2f5;
+            background: #f0f2f5 url("../cdn.prod.website-files.com/69141acf3553f1153a380568/heatmap.png") center center / cover no-repeat;
             color: var(--text-light);
             line-height: 1.6;
             overflow-x: hidden;
@@ -88,6 +88,7 @@
             overflow-y: auto;
             overflow-x: hidden;
             box-sizing: border-box;
+            margin-top: 80px;
         }
 
         .sidebar-logo-container {
@@ -1003,6 +1004,7 @@
                 transition: transform 0.3s;
                 z-index: 1000;
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+                margin-top: 0;
             }
             
             .dashboard-sidebar.open {
@@ -1440,19 +1442,22 @@
         }
         
         /* Dashboard: ensure proper spacing below On Edge Safaris navbar */
+        .navbar.w-nav {
+            margin-bottom: 24px;
+        }
         @media (min-width: 1025px) {
             .dashboard-container {
-                margin-top: 120px !important;
+                margin-top: 140px !important;
             }
         }
         @media (min-width: 768px) and (max-width: 1024px) {
             .dashboard-container {
-                margin-top: 100px !important;
+                margin-top: 130px !important;
             }
         }
         @media (max-width: 767px) {
             .dashboard-container {
-                margin-top: 80px !important;
+                margin-top: 120px !important;
             }
         }
     </style>
@@ -1464,7 +1469,7 @@
             <div class="nav-wrapper">
                 <a href="../enerza-sustainability-webflow-template.webflow.io/index.html" class="nav-brand-logo-link w-nav-brand"><img src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/69171e3463ecdcecdad1ab61_logo-white.svg" loading="lazy" alt="Logo" class="nav-brand-logo"/><img src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691c3830fc26f3a53facc0f7_logo-dark.svg" loading="lazy" alt="Logo" class="nav-brand-dark-logo"/></a>
                 <nav role="navigation" class="w-nav-menu">
-                    <div class="nav-menu-link-div"><a href="../enerza-sustainability-webflow-template.webflow.io/index.html" class="nav-link w-nav-link">Home</a><a href="../aboutus/enerza-sustainability-webflow-template.webflow.io/about-us.html" class="nav-link w-nav-link">About us</a><a href="../pricing/enerza-sustainability-webflow-template.webflow.io/pricing.html" class="nav-link w-nav-link">Pricing</a><a href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="nav-link w-nav-link">Contact us</a><a href="dashboard.html" aria-current="page" class="nav-link w-nav-link w--current">Dashboard</a></div>
+                    <div class="nav-menu-link-div"><a href="../enerza-sustainability-webflow-template.webflow.io/index.html" class="nav-link w-nav-link">Home</a><a href="../aboutus/enerza-sustainability-webflow-template.webflow.io/about-us.html" class="nav-link w-nav-link">About us</a><a href="../pricing/enerza-sustainability-webflow-template.webflow.io/pricing.html" class="nav-link w-nav-link">Pricing</a><a href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="nav-link w-nav-link">Contact us</a><a href="dashboard.html" aria-current="page" class="nav-link w-nav-link w--current">Demo</a></div>
                 </nav>
                 <div class="nav-button-wrapper">
                     <div class="menu-button w-nav-button">
@@ -2392,18 +2397,18 @@
                     <div class="footer-link-detail-div">
                         <div class="paragraph white-700-text">Company</div>
                         <div class="footer-link-div">
-                            <a href="../enerza-sustainability-webflow-template.webflow.io/index.html" class="large-paragraph footer-text-link">Home</a><a href="../aboutus/enerza-sustainability-webflow-template.webflow.io/about-us.html" class="large-paragraph footer-text-link">About us</a><a href="../pricing/enerza-sustainability-webflow-template.webflow.io/pricing.html" class="large-paragraph footer-text-link">Pricing</a><a href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="large-paragraph footer-text-link">Contact</a><a href="dashboard.html" aria-current="page" class="large-paragraph footer-text-link w--current">Dashboard</a>
+                            <a href="../enerza-sustainability-webflow-template.webflow.io/index.html" class="large-paragraph footer-text-link">Home</a><a href="../aboutus/enerza-sustainability-webflow-template.webflow.io/about-us.html" class="large-paragraph footer-text-link">About us</a><!-- <a href="../pricing/enerza-sustainability-webflow-template.webflow.io/pricing.html" class="large-paragraph footer-text-link">Pricing</a> --><a href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="large-paragraph footer-text-link">Contact</a><a href="dashboard.html" aria-current="page" class="large-paragraph footer-text-link w--current">Demo</a>
                         </div>
                     </div>
                 </div>
                 <div class="footer-contact-info-wrapper">
                     <div class="footer-contact-info-div">
-                        <div class="large-paragraph white-text">Singapore Office:</div>
-                        <p class="paragraph footer-paragraph">50 Raffles Place, #37-00, Singapore Land Tower, Singapore 048623</p>
+                        <div class="large-paragraph white-text">Nairobi Office:</div>
+                        <p class="paragraph footer-paragraph">Nairobi, Kenya</p>
                     </div>
                     <div class="footer-contact-info-div">
                         <div class="large-paragraph white-text">Contact No.:</div>
-                        <p class="paragraph footer-paragraph">+65 6221 5678</p>
+                        <p class="paragraph footer-paragraph">+254 (000) 000-000</p>
                     </div>
                 </div>
             </div>

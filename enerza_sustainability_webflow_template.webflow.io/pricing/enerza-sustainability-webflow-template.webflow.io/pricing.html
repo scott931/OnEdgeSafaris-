@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Pricing - On Edge Safaris</title>
-    <meta content="Transparent pricing for renewable energy services, sustainability consulting, and climate solutions. Ideal for green businesses offering eco plans or subscription services." name="description"
+    <meta content="On Edge Safaris revenue model: predictive protection subscriptions, edge infrastructure leasing, drone monitoring, biodiversity intelligence, and climate security. Transparent pricing for ecosystem protection." name="description"
     />
     <meta content="Pricing - Enerza - Webflow HTML website template" property="og:title" />
     <meta content="Transparent pricing for renewable energy services, sustainability consulting, and climate solutions. Ideal for green businesses offering eco plans or subscription services." property="og:description" />
@@ -47,6 +47,128 @@
       .w-webflow-badge {
         display: none !important;
       }
+      /* Pricing hero cards - prevent overlaps */
+      .pricing-hero-grid {
+        align-items: start;
+      }
+      .pricing-hero-card {
+        overflow: visible;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .pricing-hero-card .pricing-detail-div,
+      .pricing-hero-card .pricing-hero-list-wrapper {
+        flex-shrink: 0;
+      }
+      .pricing-hero-card .pricing-hero-list-wrapper {
+        flex-grow: 1;
+      }
+      /* "Most Popular" label inline with heading - no overlap */
+      .pricing-heading-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .pricing-label-inline {
+        position: static !important;
+        margin: 0 !important;
+      }
+      /* Additional Revenue Streams - Redesigned */
+      .revenue-streams-section {
+        background: linear-gradient(180deg, #0a1f0f 0%, #0d2b14 100%);
+        padding: 4rem 0;
+      }
+      .revenue-streams-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .revenue-stream-item {
+        display: grid;
+        grid-template-columns: 48px 1fr auto;
+        gap: 1.5rem;
+        align-items: start;
+        padding: 2rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .revenue-stream-item:last-child { border-bottom: none; }
+      .revenue-stream-num {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #04af4c;
+        color: white;
+        font-weight: 700;
+        font-size: 1.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .revenue-stream-content h3 {
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.3;
+      }
+      .revenue-stream-content p {
+        color: rgba(255,255,255,0.75);
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin: 0 0 0.75rem 0;
+      }
+      .revenue-stream-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .revenue-stream-tag {
+        background: rgba(4,175,76,0.15);
+        color: #6ee7a7;
+        font-size: 0.8125rem;
+        padding: 0.25rem 0.625rem;
+        border-radius: 999px;
+      }
+      .revenue-stream-price {
+        text-align: right;
+        min-width: 140px;
+      }
+      .revenue-stream-price .price-main {
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+      .revenue-stream-price .price-sub {
+        color: rgba(255,255,255,0.6);
+        font-size: 0.8125rem;
+        margin-top: 0.25rem;
+      }
+      .revenue-stream-price .cta-link {
+        display: inline-block;
+        margin-top: 0.75rem;
+        color: #04af4c;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .revenue-stream-price .cta-link:hover { text-decoration: underline; }
+      @media (max-width: 767px) {
+        .revenue-stream-item {
+          grid-template-columns: 40px 1fr;
+          gap: 1rem;
+        }
+        .revenue-stream-price {
+          grid-column: 2;
+          text-align: left;
+          min-width: auto;
+        }
+      }
     </style>
 </head>
 
@@ -58,7 +180,7 @@
             <div class="nav-wrapper"><a href="../../enerza-sustainability-webflow-template.webflow.io/index.html" class="nav-brand-logo-link w-nav-brand"><img src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/69171e3463ecdcecdad1ab61_logo-white.svg" loading="lazy" alt="Logo" class="nav-brand-logo w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1"/><img src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691c3830fc26f3a53facc0f7_logo-dark.svg" loading="lazy" alt="Logo" class="nav-brand-dark-logo w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1"/></a>
                 <nav
                     role="navigation" class="w-nav-menu">
-                    <div class="nav-menu-link-div"><a href="../../enerza-sustainability-webflow-template.webflow.io/index.html" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link">Home</a><a href="../../aboutus/enerza-sustainability-webflow-template.webflow.io/about-us.html" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link">About us</a><a href="pricing.html" aria-current="page" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link w--current">Pricing</a><a href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link">Contact us</a></div>
+                    <div class="nav-menu-link-div"><a href="../../enerza-sustainability-webflow-template.webflow.io/index.html" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link">Home</a><a href="../../aboutus/enerza-sustainability-webflow-template.webflow.io/about-us.html" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link">About us</a><a href="pricing.html" aria-current="page" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link w--current">Pricing</a><a href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link">Contact us</a><a href="../../dashboard/dashboard.html" class="nav-link w-variant-c6f887f1-c406-42ba-eea7-a1a3a8dcf7b1 w-nav-link">Demo</a></div>
                     </nav>
                     <div class="nav-button-wrapper">
                         <div class="menu-button w-nav-button">
@@ -75,23 +197,22 @@
         <div class="w-layout-blockcontainer container w-container">
             <div class="pricing-hero-wrapper">
                 <div class="pricing-hero-heading-div">
-                    <h1 data-w-id="0a75adc5-1c91-27bb-971f-e3e69b22a6bc" style="opacity:0">Flexible Pricing</h1>
-                    <p data-w-id="68d2cc6b-45fc-6632-deac-6eaa8c06332a" style="opacity:0" class="large-text">Simple, transparent pricing with no hidden fees.</p>
+                    <h1 data-w-id="0a75adc5-1c91-27bb-971f-e3e69b22a6bc" style="opacity:0">Revenue Model</h1>
+                    <p data-w-id="68d2cc6b-45fc-6632-deac-6eaa8c06332a" style="opacity:0" class="large-text">On Edge Safaris operates a multi-layered revenue model designed to protect ecosystems while supporting scalable climate infrastructure.</p>
                 </div>
             </div>
             <div class="w-layout-grid pricing-hero-grid">
                 <div data-w-id="b274f09f-967b-dfbc-aeed-0121771ab482" style="opacity:0" class="pricing-hero-div">
                     <div class="pricing-hero-card">
                         <div class="pricing-detail-div">
-                            <div class="h5-heading">Essentials</div>
-                            <p class="paragraph pricing-hero-text">Perfect to explore Enerza and publish your first jobs.</p>
+                            <div class="h5-heading">1. Predictive Protection Subscription</div>
+                            <p class="paragraph pricing-hero-text">Our core service provides predictive protection across protected landscapes using AI-driven risk modeling and autonomous monitoring systems.</p>
                             <div class="pricing-hero-line"></div>
                             <div class="pricing-hero-number-wrapper">
                                 <div class="pricing-hero-number-div">
-                                    <div class="h6-heading">£</div>
-                                    <div class="h3-heading">49</div>
+                                    <div class="h3-heading">$2–$12</div>
                                 </div>
-                                <div class="small-paragraph">per month<br/>billed yearly</div>
+                                <div class="small-paragraph">per km² per month<br/>based on landscape size</div>
                             </div>
                         </div><a data-wf--button--variant="base" href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="button w-button">Get Started</a>
                         <div class="pricing-hero-list-wrapper">
@@ -102,7 +223,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Core advisory support</div>
+                                <div class="paragraph">Predictive AI threat forecasting</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +232,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Standard reporting tools</div>
+                                <div class="paragraph">Ranger decision-support dashboards</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +241,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Email support</div>
+                                <div class="paragraph">Integration with collars, sensors, satellites</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +250,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Access to resources</div>
+                                <div class="paragraph">Biodiversity performance monitoring</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +259,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Monthly summary</div>
+                                <div class="paragraph">Real-time ecosystem risk analytics</div>
                             </div>
                         </div>
                     </div>
@@ -146,17 +267,19 @@
                 <div data-w-id="ed6445a7-1338-9cd1-d432-04c18266b4cd" style="opacity:0" class="pricing-hero-div">
                     <div class="pricing-hero-card">
                         <div class="pricing-detail-div">
-                            <div class="h5-heading">Growth</div>
-                            <p class="paragraph pricing-hero-text">Scaling startups &amp; mid-size company need advanced insights.</p>
+                            <div class="pricing-heading-row">
+                                <div class="h5-heading">2. Edge Infrastructure Leasing</div>
+                                <span class="small-paragraph pricing-label pricing-label-inline">Most Popular</span>
+                            </div>
+                            <p class="paragraph pricing-hero-text">Solar-powered autonomous edge AI nodes that detect threats and monitor ecosystem activity. Leasing includes installation, monitoring, and maintenance.</p>
                             <div class="pricing-hero-line"></div>
                             <div class="pricing-hero-number-wrapper">
                                 <div class="pricing-hero-number-div">
-                                    <div class="h6-heading">£</div>
-                                    <div class="h3-heading">199</div>
+                                    <div class="h3-heading">$250–$300</div>
                                 </div>
-                                <div class="small-paragraph">per month<br/>billed yearly</div>
+                                <div class="small-paragraph">per node per month</div>
                             </div>
-                        </div><a data-wf--button--variant="base" href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="button w-button">Start Free Trial</a>
+                        </div><a data-wf--button--variant="base" href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="button w-button">Get Started</a>
                         <div class="pricing-hero-list-wrapper">
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +288,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Everything in Essentials</div>
+                                <div class="paragraph">Chainsaw acoustic detection</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,7 +297,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Carbon &amp; ESG strategies</div>
+                                <div class="paragraph">Human vs wildlife movement classification</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +306,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Advanced analytics</div>
+                                <div class="paragraph">Autonomous monitoring and alerts</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,49 +315,23 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
 </g>
 </svg></div>
-                                <div class="paragraph">Priority support</div>
-                            </div>
-                            <div class="pricing-hero-list-div">
-                                <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="22" height="22" rx="8" fill="#ECEFF3"/>
-<g clip-path="url(#clip0_5135_57)">
-<path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
-</g>
-</svg></div>
-                                <div class="paragraph">Quarterly strategy</div>
-                            </div>
-                            <div class="pricing-hero-list-div">
-                                <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="22" height="22" rx="8" fill="#ECEFF3"/>
-<g clip-path="url(#clip0_5135_57)">
-<path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
-</g>
-</svg></div>
-                                <div class="paragraph">Multi-user team access</div>
-                            </div>
-                            <div class="pricing-hero-list-div">
-                                <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="22" height="22" rx="8" fill="#ECEFF3"/>
-<g clip-path="url(#clip0_5135_57)">
-<path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="#8585A6"/>
-</g>
-</svg></div>
-                                <div class="paragraph">Integration tools</div>
+                                <div class="paragraph">Integration with drone response systems</div>
                             </div>
                         </div>
-                        <div class="small-paragraph pricing-label">Most Popular</div>
                     </div>
                 </div>
                 <div data-w-id="f39d5a2c-f1cb-80c1-4173-2bc76c3715c8" style="opacity:0" class="pricing-hero-div">
                     <div class="pricing-hero-card active">
                         <div class="pricing-detail-div">
-                            <div class="h5-heading white-text">Essentials</div>
-                            <p class="paragraph pricing-hero-text white-700-text">Tailored solutions for large organizations &amp; complex projects.</p>
+                            <div class="h5-heading white-text">3. Biodiversity Intelligence</div>
+                            <p class="paragraph pricing-hero-text white-700-text">Investor-grade Biodiversity Intelligence Dashboard for climate funds, corporations, and ESG investors.</p>
                             <div class="pricing-hero-line"></div>
                             <div class="pricing-hero-number-wrapper">
                                 <div class="pricing-hero-number-div">
-                                    <div class="h3-heading white-text">Custom pricing</div>
+                                    <div class="h6-heading white-text">$</div>
+                                    <div class="h3-heading white-text">$2,500–$3,000</div>
                                 </div>
+                                <div class="small-paragraph white-700-text">annually</div>
                             </div>
                         </div><a data-wf--button--variant="green-button" href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="button w-variant-64e50189-d3bb-03d8-da7a-592c4b31f571 w-button">Contact Sales</a>
                         <div class="pricing-hero-list-wrapper">
@@ -245,7 +342,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="white" fill-opacity="0.6"/>
 </g>
 </svg></div>
-                                <div class="paragraph white-700-text">Everything in Growth</div>
+                                <div class="paragraph white-700-text">Live biodiversity performance metrics</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -254,7 +351,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="white" fill-opacity="0.6"/>
 </g>
 </svg></div>
-                                <div class="paragraph white-700-text">Dedicated account manager</div>
+                                <div class="paragraph white-700-text">Vegetation health analytics (NDVI)</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +360,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="white" fill-opacity="0.6"/>
 </g>
 </svg></div>
-                                <div class="paragraph white-700-text">Custom integrations</div>
+                                <div class="paragraph white-700-text">Soil carbon monitoring indicators</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -272,7 +369,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="white" fill-opacity="0.6"/>
 </g>
 </svg></div>
-                                <div class="paragraph white-700-text">On-site workshops &amp; training</div>
+                                <div class="paragraph white-700-text">Species population trends</div>
                             </div>
                             <div class="pricing-hero-list-div">
                                 <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -281,16 +378,7 @@
 <path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="white" fill-opacity="0.6"/>
 </g>
 </svg></div>
-                                <div class="paragraph white-700-text">White-label solutions</div>
-                            </div>
-                            <div class="pricing-hero-list-div">
-                                <div class="pricing-hero-list-icon w-embed"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="22" height="22" rx="8" fill="white" fill-opacity="0.1"/>
-<g clip-path="url(#clip0_5135_145)">
-<path d="M15.8536 7.47452C15.6583 7.27925 15.3417 7.27925 15.1465 7.47452L9.15614 13.4649L6.85356 11.1623C6.65831 10.967 6.34175 10.9671 6.14646 11.1623C5.95118 11.3576 5.95118 11.6741 6.14646 11.8694L8.80259 14.5255C8.99778 14.7207 9.31458 14.7206 9.5097 14.5255L15.8536 8.18163C16.0488 7.98637 16.0488 7.66979 15.8536 7.47452Z" fill="white" fill-opacity="0.6"/>
-</g>
-</svg></div>
-                                <div class="paragraph white-700-text">Annual roadmap &amp; executive</div>
+                                <div class="paragraph white-700-text">Ecosystem risk alerts</div>
                             </div>
                         </div>
                     </div>
@@ -298,222 +386,81 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section revenue-streams-section">
         <div class="w-layout-blockcontainer container w-container">
             <div class="common-heading-div text-center margin-bottom">
-                <h2 data-w-id="ff18bdea-f27b-5fc0-2e9e-66a6e9d96526" style="opacity:0">Compare features &amp; plans</h2>
+                <h2 class="white-text" style="opacity:1">Additional Revenue Streams</h2>
             </div>
-            <div data-w-id="50393db0-c534-b9b9-0253-7ab77ec876b5" style="-webkit-transform:translate3d(null, 48px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(null, 48px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(null, 48px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(null, 48px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;filter:blur(3px)"
-                class="plan-feature-wrapper">
-                <div data-w-id="50393db0-c534-b9b9-0253-7ab77ec876b6" style="opacity:0" class="plan-feature-card">
-                    <div class="plan-feature-heading-wrapper border">
-                        <p class="paragraph">Core Features</p>
-                    </div>
-                    <div class="plan-feature-heading-wrapper">
-                        <div class="pricing-detail-div">
-                            <div class="h5-heading">Essentials</div>
-                            <p class="paragraph pricing-hero-text pricing-feature-mobile-hide">Perfect to explore Enerza and publish your first jobs.</p>
-                            <div class="pricing-hero-line pricing-feature-mobile-hide"></div>
-                            <div class="pricing-hero-number-wrapper pricing-feature-mobile-hide">
-                                <div class="pricing-hero-number-div">
-                                    <div class="h6-heading">£</div>
-                                    <div class="h3-heading">49</div>
-                                </div>
-                                <div class="small-paragraph">per month<br/>billed yearly</div>
-                            </div>
+            <div class="revenue-streams-list">
+                <div class="revenue-stream-item">
+                    <div class="revenue-stream-num">4</div>
+                    <div class="revenue-stream-content">
+                        <h3>Drone Monitoring Services</h3>
+                        <p>Rapid-response protection for high-risk wildlife corridors and remote protected landscapes.</p>
+                        <div class="revenue-stream-tags">
+                            <span class="revenue-stream-tag">Autonomous aerial patrols</span>
+                            <span class="revenue-stream-tag">AI-powered image analysis</span>
+                            <span class="revenue-stream-tag">Intrusion detection</span>
+                            <span class="revenue-stream-tag">Ranger coordination</span>
                         </div>
-                        <div class="pricing-button-div"><a data-wf--button--variant="base" href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="button w-button">Get Started</a></div>
                     </div>
-                    <div class="plan-feature-heading-wrapper active-plan-feature">
-                        <div class="pricing-detail-div">
-                            <div class="h5-heading">Growth</div>
-                            <p class="paragraph pricing-hero-text pricing-feature-mobile-hide">Scaling startups &amp; mid-size company need advanced insights.</p>
-                            <div class="pricing-hero-line pricing-feature-mobile-hide"></div>
-                            <div class="pricing-hero-number-wrapper pricing-feature-mobile-hide">
-                                <div class="pricing-hero-number-div">
-                                    <div class="h6-heading">£</div>
-                                    <div class="h3-heading">49</div>
-                                </div>
-                                <div class="small-paragraph">per month<br/>billed yearly</div>
-                            </div>
-                        </div>
-                        <div class="pricing-button-div"><a data-wf--button--variant="base" href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="button w-button">Start Free Trial</a></div>
-                    </div>
-                    <div class="plan-feature-heading-wrapper">
-                        <div class="pricing-detail-div">
-                            <div class="h5-heading">Enterprise</div>
-                            <p class="paragraph pricing-hero-text pricing-feature-mobile-hide">Tailored solutions for large organizations &amp; complex projects.</p>
-                            <div class="pricing-hero-line pricing-feature-mobile-hide"></div>
-                            <div class="pricing-hero-number-wrapper pricing-feature-mobile-hide">
-                                <div class="pricing-hero-number-div">
-                                    <div class="h3-heading">Custom Pricing</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pricing-button-div"><a data-wf--button--variant="base" href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="button w-button">Contact Sales</a></div>
+                    <div class="revenue-stream-price">
+                        <div class="price-main">$500–1,500</div>
+                        <div class="price-sub">per month per corridor</div>
                     </div>
                 </div>
-                <div class="plan-feature-detail-wrapper">
-                    <div data-w-id="50393db0-c534-b9b9-0253-7ab77ec876f9" style="opacity:0" class="plan-feature-detail-div">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">Renewable Advisory</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">Basic</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="large-paragraph">Advanced</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">Custom</div>
+                <div class="revenue-stream-item">
+                    <div class="revenue-stream-num">5</div>
+                    <div class="revenue-stream-content">
+                        <h3>Climate Security Credits™</h3>
+                        <p>Support carbon market integrity through predictive ecosystem protection. We partner with carbon project developers to enable premium carbon credits with reduced permanence risk.</p>
+                        <div class="revenue-stream-tags">
+                            <span class="revenue-stream-tag">Platform &amp; monitoring fee</span>
                         </div>
                     </div>
-                    <div data-w-id="b1f8a608-e232-20f8-db57-ed1ab0b75be4" style="opacity:0" class="plan-feature-detail-div">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">Carbon &amp; ESG Strategies</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">—</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
+                    <div class="revenue-stream-price">
+                        <div class="price-main">Platform fee</div>
+                        <div class="price-sub">Traditional: $10–20/ton<br/>Security-backed: premium</div>
+                    </div>
+                </div>
+                <div class="revenue-stream-item">
+                    <div class="revenue-stream-num">6</div>
+                    <div class="revenue-stream-content">
+                        <h3>Biodiversity Data &amp; Analytics Licensing</h3>
+                        <p>Large-scale biodiversity intelligence datasets for climate modeling, research, and environmental risk analysis.</p>
+                        <div class="revenue-stream-tags">
+                            <span class="revenue-stream-tag">Ecosystem risk maps</span>
+                            <span class="revenue-stream-tag">Wildlife migration analytics</span>
+                            <span class="revenue-stream-tag">Vegetation trends</span>
+                            <span class="revenue-stream-tag">Performance indicators</span>
                         </div>
                     </div>
-                    <div data-w-id="ffc961ad-fe6d-2937-1994-11950e4d054a" style="opacity:0" class="plan-feature-detail-div">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">Sustainability Consulting</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">—</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
+                    <div class="revenue-stream-price">
+                        <div class="price-main">$2,000–5,000</div>
+                        <div class="price-sub">annually, by dataset scope</div>
                     </div>
-                    <div data-w-id="1f0030a0-d6d2-5baa-060e-d38f724450ca" style="opacity:0" class="plan-feature-detail-div">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">Analytics &amp; Impact Dashboard</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">—</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
+                </div>
+                <div class="revenue-stream-item">
+                    <div class="revenue-stream-num">7</div>
+                    <div class="revenue-stream-content">
+                        <h3>Government Landscape Protection Contracts</h3>
+                        <p>Multi-year infrastructure contracts for predictive protection systems across large protected landscapes. Supports national biodiversity protection, climate resilience, and natural capital security.</p>
                     </div>
-                    <div data-w-id="eb49f25c-4032-7717-1b43-796a3248c877" style="opacity:0" class="plan-feature-detail-div">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">Standard Reports</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">—</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="large-paragraph">Advanced</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">Custom</div>
-                        </div>
-                    </div>
-                    <div data-w-id="cc37fc9b-d066-8511-e601-f87d37922a01" style="opacity:0" class="plan-feature-detail-div">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">Custom Reports &amp; Integrations</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">—</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                    </div>
-                    <div data-w-id="d3df82ee-4793-a895-1045-f8f2a3a29435" style="opacity:0" class="plan-feature-detail-div">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">Dedicated Account Manager</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">—</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                    </div>
-                    <div data-w-id="9e3858ff-b7d0-4749-25f2-2a635bb866a3" style="opacity:0" class="plan-feature-detail-div">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">On-site Training &amp; Workshops</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">—</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="plan-feature-icon w-embed"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.9848 15.2359C6.70791 15.5128 6.259 15.5128 5.9821 15.2359L0.669109 9.9237C0.528953 9.78355 0.450195 9.59333 0.450195 9.3951C0.450195 9.19688 0.528953 9.00666 0.669109 8.86651L1.72613 7.80948C1.86629 7.66933 2.05634 7.59057 2.25473 7.59057C2.45295 7.59057 2.643 7.66933 2.78316 7.80948L6.48351 11.5092L15.2172 2.77543C15.3576 2.63528 15.5474 2.55652 15.7457 2.55652C15.9439 2.55652 16.1341 2.63528 16.2743 2.77543L17.3313 3.83246C17.4714 3.97261 17.5502 4.16283 17.5502 4.36105C17.5502 4.55928 17.4714 4.7495 17.3313 4.88965L6.9848 15.2359Z" fill="#04AF4C"/>
-</svg></div>
-                        </div>
-                    </div>
-                    <div data-w-id="a1ee8c2a-3cfd-c55f-0cff-af659e2bb039" style="opacity:0" class="plan-feature-detail-div border-bottom">
-                        <div class="plan-feature-list-div border">
-                            <div class="large-paragraph">Support</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">Email only</div>
-                        </div>
-                        <div class="plan-feature-list-div active-plan-feature">
-                            <div class="large-paragraph">Priority</div>
-                        </div>
-                        <div class="plan-feature-list-div">
-                            <div class="large-paragraph">24/7 Dedicated</div>
-                        </div>
+                    <div class="revenue-stream-price">
+                        <div class="price-main">Customised</div>
+                        <div class="price-sub">per landscape, by scale</div>
+                        <a href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="cta-link">Contact Sales →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section background-orange">
+    <section class="section background-orange" style="background-color: var(--🎨-color--green-950);">
         <div class="w-layout-blockcontainer container w-container">
             <div class="w-layout-grid faq-grid">
                 <div id="w-node-_4839c20f-6616-65ed-f931-3ab4a3166aab-a3166aa8" class="faq-div">
                     <div data-w-id="4839c20f-6616-65ed-f931-3ab4a3166aac" class="faq-heading-div">
-                        <h2>Frequently Asked Questions</h2>
+                        <h2 style="color: white;">Frequently Asked Questions</h2>
                     </div>
                 </div>
                 <div class="faq-div">
@@ -525,10 +472,10 @@
                                         <div class="accordion-minus-line"></div>
                                         <div class="accordion-plus-line"></div>
                                     </div>
-                                    <div>What industries does Enerza work with?</div>
+                                    <div>How does Predictive Protection pricing work?</div>
                                 </div>
                                 <div class="accordion-detail-div">
-                                    <p class="large-paragraph accordion-paragraph">We primarily partner with green tech startups, solar companies, renewable energy innovators, and sustainability-driven enterprises.</p>
+                                    <p class="large-paragraph accordion-paragraph">Pricing is based on the size of the landscape under predictive protection, typically ranging between $2–12 per km² per month depending on landscape size and monitoring complexity.</p>
                                 </div>
                             </a>
                             <a data-w-tab="Tab 2" data-w-id="4839c20f-6616-65ed-f931-3ab4a3166abc" class="accordion-card w-inline-block w-tab-link">
@@ -537,10 +484,10 @@
                                         <div class="accordion-minus-line"></div>
                                         <div class="accordion-plus-line"></div>
                                     </div>
-                                    <div>How can Enerza help my startup grow sustainably?</div>
+                                    <div>What is included in Edge Infrastructure Leasing?</div>
                                 </div>
                                 <div class="accordion-detail-div">
-                                    <p class="large-paragraph accordion-paragraph">From building ESG strategies to scaling renewable energy solutions, we provide tailored consulting and actionable roadmaps to ensure you grow responsibly without losing momentum.</p>
+                                    <p class="large-paragraph accordion-paragraph">Our leasing model includes installation, monitoring, and maintenance of solar-powered autonomous edge AI nodes. Instead of selling hardware, we offer a full-service model at $250–$300 per node per month.</p>
                                 </div>
                             </a>
                             <a data-w-tab="Tab 3" data-w-id="4839c20f-6616-65ed-f931-3ab4a3166ac6" class="accordion-card w-inline-block w-tab-link">
@@ -549,10 +496,10 @@
                                         <div class="accordion-minus-line"></div>
                                         <div class="accordion-plus-line"></div>
                                     </div>
-                                    <div>Do you offer measurable impact reporting?</div>
+                                    <div>Who is the Biodiversity Intelligence Dashboard for?</div>
                                 </div>
                                 <div class="accordion-detail-div">
-                                    <p class="large-paragraph accordion-paragraph">Yes. We track and deliver detailed carbon savings, compliance progress, and ESG reporting that can be shared with investors, partners, or stakeholders.</p>
+                                    <p class="large-paragraph accordion-paragraph">Our investor-grade dashboard is designed for climate funds, corporations, and ESG investors. Subscribers gain access to live biodiversity metrics, vegetation health analytics, soil carbon monitoring, species trends, and ecosystem risk alerts.</p>
                                 </div>
                             </a>
                             <a data-w-tab="Tab 4" data-w-id="4839c20f-6616-65ed-f931-3ab4a3166ad0" class="accordion-card w-inline-block w-tab-link">
@@ -561,10 +508,10 @@
                                         <div class="accordion-minus-line"></div>
                                         <div class="accordion-plus-line"></div>
                                     </div>
-                                    <div>Can established corporations also work with Enerza?</div>
+                                    <div>What are Climate Security Credits™?</div>
                                 </div>
                                 <div class="accordion-detail-div">
-                                    <p class="large-paragraph accordion-paragraph">Absolutely. While we specialize in startups and innovators, we also advise corporations and SMEs aiming to integrate renewable and sustainable practices.</p>
+                                    <p class="large-paragraph accordion-paragraph">We partner with carbon project developers to enable premium carbon credits with reduced permanence risk. Traditional credits often trade between $10–20 per ton; security-backed credits command higher premiums. On Edge Safaris receives a platform and monitoring fee for protection services.</p>
                                 </div>
                             </a>
                             <a data-w-tab="Tab 5" data-w-id="4839c20f-6616-65ed-f931-3ab4a3166ada" class="accordion-card w-inline-block w-tab-link">
@@ -573,10 +520,10 @@
                                         <div class="accordion-minus-line"></div>
                                         <div class="accordion-plus-line"></div>
                                     </div>
-                                    <div>What regions do you serve?</div>
+                                    <div>Can governments partner with On Edge Safaris?</div>
                                 </div>
                                 <div class="accordion-detail-div">
-                                    <p class="large-paragraph accordion-paragraph">Enerza supports businesses globally, with projects across Europe, Asia, and North America. Our approach is adaptable to local markets and international standards.</p>
+                                    <p class="large-paragraph accordion-paragraph">Yes. We partner with governments to deploy predictive protection systems across large protected landscapes. Multi-year infrastructure contracts are customised per landscape depending on deployment scale, supporting national biodiversity protection and climate resilience.</p>
                                 </div>
                             </a>
                             <a data-w-tab="Tab 6" data-w-id="4839c20f-6616-65ed-f931-3ab4a3166ae4" class="accordion-card w-inline-block w-tab-link">
@@ -585,10 +532,10 @@
                                         <div class="accordion-minus-line"></div>
                                         <div class="accordion-plus-line"></div>
                                     </div>
-                                    <div>How do I get started with Enerza?</div>
+                                    <div>How do I get started with On Edge Safaris?</div>
                                 </div>
                                 <div class="accordion-detail-div">
-                                    <p class="large-paragraph accordion-paragraph">You can reach out through our contact form. After an initial consultation, we’ll design a strategy tailored to your sustainability goals.</p>
+                                    <p class="large-paragraph accordion-paragraph">Reach out through our contact form or email info@onedgesafarisAI.com. After an initial consultation, we’ll design a solution tailored to your landscape protection and biodiversity monitoring needs.</p>
                                 </div>
                             </a>
                         </div>
@@ -607,6 +554,24 @@
     </section>
     <section class="section">
         <div class="w-layout-blockcontainer container w-container">
+            <div data-w-id="373e409c-caa2-6770-6dfa-17d710732bbe" style="margin-top: 2rem; opacity: 1;" class="contact-detail-div">
+                <div data-w-id="09492479-ec60-a0f4-8a4c-4d6280f9b54f" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="contact-info-div">
+                    <div class="large-text">Address</div>
+                    <div class="h6-heading contact-info-text">Nairobi, Kenya</div>
+                </div>
+                <div data-w-id="47c4e520-758e-1a6d-e282-bf7111b2f8aa" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="contact-info-div">
+                    <div class="large-text">Contact number</div>
+                    <div class="h6-heading contact-info-text">+254 (000) 000-000</div>
+                </div>
+                <div data-w-id="f5f70592-63a2-de57-8e63-e653a0f55cb1" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="contact-info-div">
+                    <div class="large-text">Email</div>
+                    <div class="h6-heading contact-info-text">info@onedgesafarisAI.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="w-layout-blockcontainer container w-container">
             <div class="w-layout-grid contact-grid">
                 <div class="contact-div">
                     <div class="contact-wrapper">
@@ -617,7 +582,7 @@
                             </div>
                         </div>
                         <div class="contact-info-wrapper">
-                            <div data-w-id="7d64e2d9-1cb4-eafd-2673-c91acaa82316" class="small-paragraph contact-mail-text">Write to us on: <a href="mailto:contact@onedgesafaris.com" class="paragraph contact-mail-text-link">contact@onedgesafaris.com</a></div>
+                            <div data-w-id="7d64e2d9-1cb4-eafd-2673-c91acaa82316" class="small-paragraph contact-mail-text">Write to us on: <a href="mailto:info@onedgesafarisAI.com" class="paragraph contact-mail-text-link">info@onedgesafarisAI.com</a></div>
                         </div>
                     </div>
                 </div>
@@ -729,18 +694,18 @@
                 <div data-w-id="fd9fbd89-d338-9239-f05f-888f1a73e62e" class="footer-detail-wrapper">
                     <div class="footer-link-detail-div">
                         <div class="paragraph white-700-text">Company</div>
-                        <div class="footer-link-div"><a href="../../enerza-sustainability-webflow-template.webflow.io/index.html" class="large-paragraph footer-text-link">Home</a><a href="../../aboutus/enerza-sustainability-webflow-template.webflow.io/about-us.html" class="large-paragraph footer-text-link">About us</a><a href="pricing.html" aria-current="page" class="large-paragraph footer-text-link w--current">Pricing</a><a href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="large-paragraph footer-text-link">Contact</a>
+                        <div class="footer-link-div"><a href="../../enerza-sustainability-webflow-template.webflow.io/index.html" class="large-paragraph footer-text-link">Home</a><a href="../../aboutus/enerza-sustainability-webflow-template.webflow.io/about-us.html" class="large-paragraph footer-text-link">About us</a><!-- <a href="pricing.html" aria-current="page" class="large-paragraph footer-text-link w--current">Pricing</a> --><a href="../../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html" class="large-paragraph footer-text-link">Contact</a>
                         </div>
                     </div>
                 </div>
                 <div data-w-id="fd9fbd89-d338-9239-f05f-888f1a73e649" class="footer-contact-info-wrapper">
                     <div class="footer-contact-info-div">
-                        <div class="large-paragraph white-text">Singapore Office:</div>
-                        <p class="paragraph footer-paragraph">50 Raffles Place, #37-00, Singapore Land Tower, Singapore 048623</p>
+                        <div class="large-paragraph white-text">Nairobi Office:</div>
+                        <p class="paragraph footer-paragraph">Nairobi, Kenya</p>
                     </div>
                     <div class="footer-contact-info-div">
                         <div class="large-paragraph white-text">Contact No.:</div>
-                        <p class="paragraph footer-paragraph">+65 6221 5678</p>
+                        <p class="paragraph footer-paragraph">+254 (000) 000-000</p>
                     </div>
                 </div>
             </div>
