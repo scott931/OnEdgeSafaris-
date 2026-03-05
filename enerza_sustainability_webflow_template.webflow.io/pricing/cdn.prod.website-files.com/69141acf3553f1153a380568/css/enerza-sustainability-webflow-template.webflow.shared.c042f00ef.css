@@ -2641,6 +2641,7 @@ a {
 .section.background-orange.results-section {
     position: relative;
     overflow: hidden;
+    background: linear-gradient(180deg, #0a1f0f 0%, #0d2b14 100%);
 }
 
 .section.blog-section {
@@ -3598,7 +3599,7 @@ a {
 .footer {
     padding-top: var(--_📐-spacing---1️⃣-spacing--space-xxxxl);
     padding-bottom: var(--_📐-spacing---1️⃣-spacing--space-xl);
-    background-image: radial-gradient(circle farthest-corner at 50% -10%, transparent, var(--🎨-color--black) 60%), url("https://cdn.prod.website-files.com/69141acf3553f1153a380568/691c1e70bc2a3a2dc89c1828_footer-background.webp");
+    background-image: radial-gradient(circle farthest-corner at 50% -10%, transparent, var(--🎨-color--black) 60%), url("../Zebra.png");
     background-position: 0 0, 50% 0;
     background-size: auto, cover;
 }

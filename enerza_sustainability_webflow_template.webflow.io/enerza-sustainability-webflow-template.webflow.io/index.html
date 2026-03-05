@@ -70,6 +70,12 @@
         margin-bottom: 0;
         margin-top: 1rem;
       }
+      .navbar .nav-brand-logo,
+      .navbar .nav-brand-dark-logo {
+        width: 150px;
+        height: auto;
+        max-width: 100%;
+      }
       @media (min-width: 992px) {
         html.w-mod-js:not(.w-mod-ix) [data-w-id="82420cf0-f42f-fb1c-180f-2478c04f1024"] {
           opacity: 0;
@@ -184,6 +190,18 @@
           transform: translate3d(49px, -30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
         }
       }
+      /* Capability cards: content-only layout (images removed) */
+      .capability-card {
+        align-items: stretch;
+        min-height: 200px;
+        background-color: #f8faf8;
+      }
+      .capability-card .capability-detail-div {
+        position: relative;
+      }
+      .footer {
+        background-image: radial-gradient(circle farthest-corner at 50% -10%, transparent, var(--🎨-color--black) 60%), url("../cdn.prod.website-files.com/69141acf3553f1153a380568/Zebra.png");
+      }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -227,11 +245,11 @@
         <div class="nav-wrapper">
           <a href="index.html" aria-current="page" class="nav-brand-logo-link w-nav-brand w--current"
             ><img
-              src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/69171e3463ecdcecdad1ab61_logo-white.svg"
+              src="../cdn.prod.website-files.com/69141acf3553f1153a380568/logo2.png"
               loading="lazy"
               alt="Logo"
               class="nav-brand-logo" /><img
-              src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691c3830fc26f3a53facc0f7_logo-dark.svg"
+              src="../cdn.prod.website-files.com/69141acf3553f1153a380568/logo2.png"
               loading="lazy"
               alt="Logo"
               class="nav-brand-dark-logo"
@@ -642,6 +660,24 @@
           <p class="large-text who-we-are-paragraph">
             Sustainable, scalable, and finance-aligned.
           </p>
+          <div class="button-div">
+            <a
+              data-wf--icon-button--variant="black-button"
+              data-w-id="fee4eba2-088c-1a12-2af6-361a6ade884e"
+              href="../pricing/enerza-sustainability-webflow-template.webflow.io/pricing.html"
+              class="common-button w-variant-2d8cf068-9139-5d6f-2744-baad6fb80487 w-inline-block"
+              ><div class="button-bg"></div>
+              <div class="button-icon-div">
+                <img
+                  src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/69171e3436d20351dac2ce83_buton-arrow.svg"
+                  loading="lazy"
+                  alt=""
+                  class="button-icon"
+                />
+              </div>
+              <div class="button-text">View Revenue Streams</div></a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -666,29 +702,17 @@
                 data-w-id="af941a41-bb10-c127-edc7-ecf2a7d4d677"
                 href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html"
                 class="capability-card w-inline-block"
-                ><img
-                  src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad5959aa53400e6251_capability1.webp"
-                  loading="lazy"
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
-                  srcset="
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad5959aa53400e6251_capability1-p-500.webp   500w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad5959aa53400e6251_capability1-p-800.webp   800w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad5959aa53400e6251_capability1-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad5959aa53400e6251_capability1.webp        1389w
-                  "
-                  alt="Capability Image"
-                  class="capability-image-div"
-                />
+                >
                 <div class="capability-detail-div">
                   <div class="capability-icon-wrapper">
                     <div class="capability-icon-div">
                       <div class="capability-icon w-embed">
                         <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g clip-path="url(#clip0_5013_495)">
-                            <path
+                            <!-- <path
                               d="M7.40018 5.75039L5.75051 4.10072C5.29551 3.64514 4.55584 3.64514 4.10084 4.10072C3.64526 4.5563 3.64526 5.2948 4.10084 5.75039L5.75051 7.40005C5.97801 7.62814 6.27668 7.74189 6.57534 7.74189C6.87401 7.74189 7.17268 7.62814 7.40018 7.40005C7.85576 6.94447 7.85576 6.20597 7.40018 5.75039Z"
                               fill="white"
-                            />
+                            /> -->
                             <path
                               d="M3.5 12.8333H1.16667C0.522667 12.8333 0 13.3559 0 13.9999C0 14.6439 0.522667 15.1666 1.16667 15.1666H3.5C4.144 15.1666 4.66667 14.6439 4.66667 13.9999C4.66667 13.3559 4.144 12.8333 3.5 12.8333Z"
                               fill="white"
@@ -756,19 +780,7 @@
                 data-w-id="387257c3-4fc8-4a61-ad6e-8dc20f0ba98f"
                 href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html"
                 class="capability-card w-inline-block"
-                ><img
-                  src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad115cb4e22eed176d_capability2.webp"
-                  loading="lazy"
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
-                  srcset="
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad115cb4e22eed176d_capability2-p-500.webp   500w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad115cb4e22eed176d_capability2-p-800.webp   800w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad115cb4e22eed176d_capability2-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ad115cb4e22eed176d_capability2.webp        1389w
-                  "
-                  alt="Capability Image"
-                  class="capability-image-div"
-                />
+                >
                 <div class="capability-detail-div">
                   <div class="capability-icon-wrapper">
                     <div class="capability-icon-div">
@@ -814,19 +826,7 @@
                 data-w-id="c171dd5d-0759-862f-8c04-ee32ac2367f3"
                 href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html"
                 class="capability-card w-inline-block"
-                ><img
-                  src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abaad09a93050dbf8a_capability3.webp"
-                  loading="lazy"
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
-                  srcset="
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abaad09a93050dbf8a_capability3-p-500.webp   500w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abaad09a93050dbf8a_capability3-p-800.webp   800w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abaad09a93050dbf8a_capability3-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abaad09a93050dbf8a_capability3.webp        1389w
-                  "
-                  alt="Capability Image"
-                  class="capability-image-div"
-                />
+                >
                 <div class="capability-detail-div">
                   <div class="capability-icon-wrapper">
                     <div class="capability-icon-div">
@@ -894,19 +894,7 @@
                 data-w-id="0ebb41a3-42c0-9927-0bfd-4df7d341f171"
                 href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html"
                 class="capability-card w-inline-block"
-                ><img
-                  src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab02c0e10d4392c739_capability4.webp"
-                  loading="lazy"
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
-                  srcset="
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab02c0e10d4392c739_capability4-p-500.webp   500w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab02c0e10d4392c739_capability4-p-800.webp   800w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab02c0e10d4392c739_capability4-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab02c0e10d4392c739_capability4.webp        1386w
-                  "
-                  alt="Capability Image"
-                  class="capability-image-div"
-                />
+                >
                 <div class="capability-detail-div">
                   <div class="capability-icon-wrapper">
                     <div class="capability-icon-div">
@@ -964,19 +952,7 @@
                 data-w-id="0196e332-184c-d4d6-a945-97fd413c795b"
                 href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html"
                 class="capability-card w-inline-block"
-                ><img
-                  src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab050b7325dcb73af4_capability5.webp"
-                  loading="lazy"
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
-                  srcset="
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab050b7325dcb73af4_capability5-p-500.webp   500w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab050b7325dcb73af4_capability5-p-800.webp   800w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab050b7325dcb73af4_capability5-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7ab050b7325dcb73af4_capability5.webp        1389w
-                  "
-                  alt="Capability Image"
-                  class="capability-image-div"
-                />
+                >
                 <div class="capability-detail-div">
                   <div class="capability-icon-wrapper">
                     <div class="capability-icon-div">
@@ -1024,19 +1000,7 @@
                 data-w-id="bc24acc2-006b-98f3-751b-79621c102627"
                 href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html"
                 class="capability-card w-inline-block"
-                ><img
-                  src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7adb49aa675beca6941_capability6.webp"
-                  loading="lazy"
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
-                  srcset="
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7adb49aa675beca6941_capability6-p-500.webp   500w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7adb49aa675beca6941_capability6-p-800.webp   800w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7adb49aa675beca6941_capability6-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7adb49aa675beca6941_capability6.webp        1389w
-                  "
-                  alt="Capability Image"
-                  class="capability-image-div"
-                />
+                >
                 <div class="capability-detail-div">
                   <div class="capability-icon-wrapper">
                     <div class="capability-icon-div">
@@ -1082,19 +1046,7 @@
                 data-w-id="079c166d-82a6-7daa-c103-d5712691ff24"
                 href="../contactus/enerza-sustainability-webflow-template.webflow.io/contact-us.html"
                 class="capability-card w-inline-block"
-                ><img
-                  src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abb5d599f92f650d28_capability7.webp"
-                  loading="lazy"
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
-                  srcset="
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abb5d599f92f650d28_capability7-p-500.webp   500w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abb5d599f92f650d28_capability7-p-800.webp   800w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abb5d599f92f650d28_capability7-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/69141acf3553f1153a380568/691ab7abb5d599f92f650d28_capability7.webp        1389w
-                  "
-                  alt="Capability Image"
-                  class="capability-image-div"
-                />
+                >
                 <div class="capability-detail-div">
                   <div class="capability-icon-wrapper">
                     <div class="capability-icon-div">
@@ -2056,7 +2008,7 @@
           <div data-w-id="fd9fbd89-d338-9239-f05f-888f1a73e61e" class="footer-detail-div">
             <a href="index.html" aria-current="page" class="footer-logo-link w-inline-block w--current"
               ><img
-                src="https://cdn.prod.website-files.com/69141acf3553f1153a380568/69171e3463ecdcecdad1ab61_logo-white.svg"
+                src="../cdn.prod.website-files.com/69141acf3553f1153a380568/logo2.png"
                 loading="lazy"
                 alt="Logo"
                 class="footer-logo"
@@ -2147,7 +2099,7 @@
         <div data-w-id="fd9fbd89-d338-9239-f05f-888f1a73e654" class="footer-line"></div>
         <div class="footer-bottom-div">
           <div data-w-id="fd9fbd89-d338-9239-f05f-888f1a73e656" class="paragraph white-700-text">
-            © 2025 On Edge Safaris
+            © On Edge Safaris
           </div>
           <div data-w-id="fd9fbd89-d338-9239-f05f-888f1a73e658" class="footer-copyright-wrapper">
             <div class="footer-copyright-divider w-embed">
