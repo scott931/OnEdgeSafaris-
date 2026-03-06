@@ -328,7 +328,7 @@
             .dashboard-container {
                 width: calc(100% - 30px) !important;
                 margin: 230px auto 30px auto !important;
-                margin-top: 230px !important;
+                margin-top: 0px !important;
                 height: calc(100vh - 85px) !important;
             }
         }
@@ -998,7 +998,7 @@
                 height: auto;
                 min-height: auto;
                 max-height: none;
-                margin-top: 220px !important;
+                margin-top: 7rem !important;
                 border-radius: 0 !important;
                 border-left: none !important;
                 border-right: none !important;
@@ -1017,9 +1017,12 @@
                 z-index: 1000;
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
                 margin-top: 0;
+                /* Remove from layout when closed - prevents flex/whitespace issues */
+                display: none;
             }
             
             .dashboard-sidebar.open {
+                display: block;
                 transform: translateX(0);
             }
             
@@ -1203,7 +1206,7 @@
                 width: 100% !important;
                 margin: 0 !important;
                 padding: 0 !important;
-                margin-top: 220px !important;
+                margin-top: 2rem !important;
                 border-radius: 0 !important;
                 border-left: none !important;
                 border-right: none !important;
@@ -1708,7 +1711,7 @@
         }
         @media (max-width: 767px) {
             .dashboard-container {
-                margin-top: 220px !important;
+                margin-top: 2rem !important;
             }
         }
     </style>

@@ -49,6 +49,22 @@
       .w-webflow-badge {
         display: none !important;
       }
+      .hero-video-overlay {
+        inset: 0 !important;
+      }
+      /* Mobile: extend hero background/overlay to top so overlay isn't pushed down */
+      @media screen and (max-width: 767px) {
+        #home .hero-background-video {
+          margin-top: -260px;
+          padding-top: 260px;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        #home .hero-background-video {
+          margin-top: -300px;
+          padding-top: 300px;
+        }
+      }
       .hero-section .button-div {
         display: flex;
         flex-direction: row;
