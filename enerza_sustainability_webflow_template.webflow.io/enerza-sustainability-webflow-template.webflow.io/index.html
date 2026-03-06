@@ -219,6 +219,19 @@
       .footer {
         background-image: radial-gradient(circle farthest-corner at 50% -10%, transparent, var(--🎨-color--black) 60%), url("../cdn.prod.website-files.com/69141acf3553f1153a380568/Zebra.png");
       }
+      /* Mobile: clear navbar/hero overlap */
+      @media screen and (max-width: 767px) {
+        #home.hero-section,
+        #home.common-hero-section {
+          padding-top: 260px !important;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        #home.hero-section,
+        #home.common-hero-section {
+          padding-top: 300px !important;
+        }
+      }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
