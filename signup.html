@@ -16,6 +16,7 @@
     <link href="enerza_sustainability_webflow_template.webflow.io/cdn.prod.website-files.com/69141acf3553f1153a380568/logo2.png" rel="icon" type="image/png" />
     <link href="enerza_sustainability_webflow_template.webflow.io/cdn.prod.website-files.com/69141acf3553f1153a380568/logo2.png" rel="shortcut icon" type="image/png" />
     <link href="enerza_sustainability_webflow_template.webflow.io/cdn.prod.website-files.com/69141acf3553f1153a380568/logo2.png" rel="apple-touch-icon" type="image/png" />
+    <link rel="preload" as="image" href="enerza_sustainability_webflow_template.webflow.io/cdn.prod.website-files.com/elephants.png" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -181,7 +182,16 @@
         .signup-right-image {
             position: absolute;
             inset: 0;
-            background: url("enerza_sustainability_webflow_template.webflow.io/cdn.prod.website-files.com/elephants.png") center center / cover no-repeat;
+            background: #2d5a3d;
+        }
+        
+        .signup-right-image img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         
         .signup-right-overlay {
@@ -290,7 +300,9 @@
     </div>
 
     <div class="signup-right">
-        <div class="signup-right-image"></div>
+        <div class="signup-right-image">
+            <img src="enerza_sustainability_webflow_template.webflow.io/cdn.prod.website-files.com/elephants.png" alt="" loading="eager" fetchpriority="high" decoding="async" />
+        </div>
         <div class="signup-right-overlay">
             <p>Predictive climate and biodiversity defense for the planet's most valuable ecosystems. Join On Edge Safaris to access real-time monitoring, AI threat detection, and ecosystem protection.</p>
             <span class="signup-right-cta">Try On Edge Safaris for free</span>
